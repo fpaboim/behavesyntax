@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>comment</key>
+  <string>
+    todo:
+      list comprehension / generator comprehension scope.
+  </string>
+  <key>fileTypes</key>
+  <array>
+    <string>feature</string>
+  </array>
+  <key>foldingStartMarker</key>
+  <string>^\s*(def|class)\s+([.a-zA-Z0-9_ &lt;]+)\s*(\((.*)\))?\s*:|\{\s*$|\(\s*$|\[\s*$|^\s*"""(?=.)(?!.*""")</string>
+  <key>foldingStopMarker</key>
+  <string>^\s*$|^\s*\}|^\s*\]|^\s*\)|^\s*"""\s*$</string>
+  <key>keyEquivalent</key>
+  <string>^~P</string>
+  <key>name</key>
+  <string>Behave</string>
+  <key>patterns</key>
+  <array>
+
+    <dict>
+      <key>match</key>
+      <string>\b([Gg]iven|[Ww]hen|[Tt]hen|[Aa]nd|[Bb]ut)\b</string>
+      <key>name</key>
+      <string>keyword.control.behave</string>
+    </dict>
+
+    <dict>
+      <key>match</key>
+      <string>\b([Ee]xamples|[Ss]cenario [Oo]utline|[Ss]cenario)\b</string>
+      <key>name</key>
+      <string>string.quoted.other.multiline.behave</string>
+    </dict>
+
+    <dict>
+      <key>match</key>
+      <string>\b([Ff]eature [Oo]utline|[Ff]eature)\b</string>
+      <key>name</key>
+      <string>entity.name.function.behave</string>
+    </dict>
+
+    <dict>
+      <key>match</key>
+      <string>@\w+\b</string>
+      <key>name</key>
+      <string>constant.language.boolean</string>
+    </dict>
+
+    <dict>
+      <key>match</key>
+      <string>[|]</string>
+      <key>name</key>
+      <string>constant.numeric.lua</string>
+    </dict>
+
+    <dict>
+      <key>match</key>
+      <string>&lt;(\w+)&gt;</string>
+      <key>name</key>
+      <string>constant.numeric.lua</string>
+    </dict>
+
+    <dict>
+      <key>captures</key>
+      <dict>
+        <key>1</key>
+        <dict>
+          <key>name</key>
+          <string>punctuation.definition.comment.lua</string>
+        </dict>
+      </dict>
+      <key>match</key>
+      <string>(#)(?!\[\[).*$\n?</string>
+      <key>name</key>
+      <string>comment.line.double-dash.behave</string>
+    </dict>
+
+  </array>
+  <key>scopeName</key>
+  <string>source.behave</string>
+</dict>
+</plist>
